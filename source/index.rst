@@ -11,6 +11,7 @@ Python Test Tool
    :caption: unittest:
 
    ./unittest/01_skeleton
+   ./unittest/02_tox_unittest
    ./tool/sphinx.ext.autodoc
 
 .. toctree::
