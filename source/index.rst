@@ -38,3 +38,11 @@ Python Test Tool
    :caption: 学習資料・E ラーニングサイト
 
    ./study
+
+.. toctree::
+   :maxdepth: 2
+   :caption: その他
+
+   ./aws/aws_sdk
+   ./gcp/google_tink
+
