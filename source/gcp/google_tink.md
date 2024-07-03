@@ -86,7 +86,7 @@ AWS KMS は本物ではなく LocalStack を使用する。
 
     #3 で作成した `AccessKeyId` と `SecretAccessKey` を使って、下記の書式で credentials.ini を作成します。
 
-    ```credentials.ini
+    ```ini
     [default]
     aws_access_key_id = AccessKeyId
     aws_secret_access_key = SecretAccessKey

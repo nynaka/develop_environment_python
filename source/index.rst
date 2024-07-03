@@ -18,6 +18,8 @@ Python Test Tool
    :maxdepth: 2
    :caption: pytest:
 
+   ./pytest/01_skeleton
+
 .. toctree::
    :maxdepth: 2
    :caption: テストツール:
