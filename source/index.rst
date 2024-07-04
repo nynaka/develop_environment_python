@@ -12,7 +12,6 @@ Python Test Tool
 
    ./unittest/01_skeleton
    ./unittest/02_tox_unittest
-   ./tool/sphinx.ext.autodoc
 
 .. toctree::
    :maxdepth: 2
@@ -28,6 +27,9 @@ Python Test Tool
    ./tool/black
    ./tool/flake8
    ./tool/ruff
+
+   ./tool/sphinx.ext.autodoc
+   ./tool/doxygen
 
 .. toctree::
    :maxdepth: 2
