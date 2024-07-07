@@ -1,6 +1,8 @@
 Python 学習資料
 ===
 
+- [公式チュートリアル](https://docs.python.org/ja/3/tutorial/)
+
 ## 教科書
 
 - [東京大学 Pythonプログラミング入門](https://utokyo-ipp.github.io/)  
@@ -18,3 +20,8 @@ Python 学習資料
 - キカガク様
     - [Python 基礎入門コース](https://www.kikagaku.ai/learning/courses/detail/python-basic/)
     - [Python&機械学習入門](https://www.kikagaku.ai/learning/courses/detail/pre-video/)
+
+## その他
+
+- [Numpy100本ノック](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.md)
+- [Pandas100本ノック](https://github.com/kunishou/Pandas_100_knocks)

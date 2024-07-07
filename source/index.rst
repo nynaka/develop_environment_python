@@ -18,6 +18,7 @@ Python Test Tool
    :caption: pytest:
 
    ./pytest/01_skeleton
+   ./pytest/02_tox_pytest
 
 .. toctree::
    :maxdepth: 2
