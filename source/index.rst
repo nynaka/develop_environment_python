@@ -27,7 +27,12 @@ Python Test Tool
    ./tool/bandit
    ./tool/black
    ./tool/flake8
+   ./tool/isort
+   ./tool/mypy
+   ./tool/pyflakes
+   ./tool/pylint
    ./tool/ruff
+   ./tool/sonarqube
 
    ./tool/sphinx.ext.autodoc
    ./tool/doxygen
