@@ -21,6 +21,16 @@ Python 学習資料
     - [Python 基礎入門コース](https://www.kikagaku.ai/learning/courses/detail/python-basic/)
     - [Python&機械学習入門](https://www.kikagaku.ai/learning/courses/detail/pre-video/)
 
+## 資格試験
+
+- [Python3 エンジニア認定試験模試](https://www.pythonic-exam.com/)
+  - [ExamApp](https://python-basic.com/)
+  - [DPro](https://diver.diveintocode.jp/dive_into_exam/lp)
+    - [Python3エンジニア認定基礎試験](https://diver.diveintocode.jp/dive_into_exam/1)
+    - [Python3エンジニア認定実践試験](https://diver.diveintocode.jp/dive_into_exam/36)
+    - [Python3エンジニア認定データ分析試験](https://diver.diveintocode.jp/dive_into_exam/2)
+  - [Prime Study](https://study.prime-strategy.co.jp/)
+
 ## その他
 
 - [Numpy100本ノック](https://github.com/rougier/numpy-100/blob/master/100_Numpy_exercises.md)

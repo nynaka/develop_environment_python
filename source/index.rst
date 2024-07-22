@@ -42,6 +42,7 @@ Python Test Tool
    :caption: デバッグツール
 
    ./tool/pdb
+   ./tool/vscode
 
 .. toctree::
    :maxdepth: 2
