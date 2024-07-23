@@ -12,6 +12,19 @@ Python 向けの VSCode 設定
 関数引数や戻り値の型アノテーションを適切に設定しておくと、型アノテーションを考慮した docstring を生成してくれるので、引数や関数戻り値の型説明を書く手間を削減してくれます。
 
 
+## [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
+
+Linter の設定方法が変わったらしいです。
+
+```bash
+{
+  "flake8.args": [
+    "--max-line-length=120",
+    "--max-complexity=10",
+  ],
+}
+```
+
 ## [Mypy Type Checker](https://marketplace.visualstudio.com/items?itemName=ms-python.mypy-type-checker)
 
 mypy をインストールしていると型アノテーション指定無しを問題として検出してくれます。
