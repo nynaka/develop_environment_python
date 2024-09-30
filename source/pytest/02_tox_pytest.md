@@ -24,7 +24,7 @@ pip install tox
     |-- tox.ini
     ```
 
-- tox.ini
+- tox.ini サンプル
 
     requirements に書かれている Python モジュールをインストールし、テストコード実行後、カバレッジを tox を実行したプロンプト、HTML、XML 形式で出力します。  
     XML は後ほど SonarQube で利用します。
@@ -43,11 +43,11 @@ pip install tox
         pytest -v --cov=./ --cov-report=xml
     ```
 
-## bandit のセキュリティチェックと ruff のコードチェックを導入する
+## bandit のセキュリティチェックと ruff のコードチェックと mypy の関数宣言チェックと pylint の全体的なチェック
 
 ```ini
 [tox]
-envlist = bandit, ruff, py312
+envlist = bandit, ruff, mypy, pylint, py312
 
 [testenv]
 setenv =
@@ -67,4 +67,12 @@ deps = ruff
 commands =
     ruff format ./app
     ruff check --output-format=github ./app
+
+[testenv:mypy]
+deps = mypy
+commands = mypy --strict ./app
+
+[testenv:pylint]
+deps = pylint
+commands = pylint ./app
 ```

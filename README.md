@@ -34,10 +34,18 @@ Python の開発環境構築メモです。
 
 - 日本語フォントのインストール
 
-    ```bash
-    sudo apt install -y \
-        fonts-ipafont fonts-ipaexfont
-    ```
+    - Debian / Ubuntu
+
+        ```bash
+        sudo apt install -y \
+            fonts-ipafont fonts-ipaexfont
+        ```
+
+    - macOS
+
+        ```bash
+        brew install font-ipafont font-ipaexfont
+        ```
 
 - source/conf.py の設定
 
