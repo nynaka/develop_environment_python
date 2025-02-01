@@ -52,8 +52,10 @@ Python Test Tool
 
 .. toctree::
    :maxdepth: 2
-   :caption: その他
+   :caption: サンプルコード
 
    ./aws/aws_sdk
    ./gcp/google_tink
+
+   ./sample/pykcs11
 
