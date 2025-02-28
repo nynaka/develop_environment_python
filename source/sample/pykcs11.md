@@ -1,10 +1,10 @@
-PyKCS11を使ったHSM操作
+[PyKCS11](https://github.com/LudovicRousseau/PyKCS11/)
 ===
 
-PyKCS11 は、Python で PKCS#11 インタフェース関数を利用するラッパーライブラリで、マイナンバーカードの電子署名ツールとしても紹介されているライブラリです。  
+[PyKCS11](https://github.com/LudovicRousseau/PyKCS11/) は、Python で PKCS#11 インタフェース関数を利用するラッパーライブラリです。  
 他には python-pkcs11 というライブラリもあります。
 
-## テスト環境の準備
+## 実行環境準備
 
 ### SoftHSM のインストール
 
@@ -38,7 +38,7 @@ PyKCS11 は、Python で PKCS#11 インタフェース関数を利用するラ�
     ```
 
 <details>
-<summary>pkcs11-tool での操作</summary>
+<summary>pkcs11-tool での SoftHSM 操作</summary>
 
 - サポートアルゴリズム一覧の確認
 
@@ -130,7 +130,13 @@ PyKCS11 は、Python で PKCS#11 インタフェース関数を利用するラ�
             ```
 </details>
 
+
 ## サンプルコード
+
+[Welcome to PyKCS11’s documentation — PyKCS11 1.5.17 documentation](https://pkcs11wrap.sourceforge.io/api/) に API ドキュメントはあるのですが、関数単位の解説を読んでも、ある程度使い方を把握した人じゃないとわからない気がしました。  
+
+ドキュメントの最後の方にある [PyKCS11 samples codes](https://pkcs11wrap.sourceforge.io/api/samples.html) や [テストコード](https://github.com/LudovicRousseau/PyKCS11/tree/master/test) に動作するコードがあるので、それをベースにカスタマイズした方が要領が得られると思います。
+
 
 <details open="">
 <summary>対称鍵で暗号・復号</summary>
@@ -145,6 +151,9 @@ from PyKCS11 import PyKCS11
 # PKCS11 モジュールのパス
 PKCS11_LIB = "/usr/lib/softhsm/libsofthsm2.so"
 
+# User PIM
+PIN = "1234"
+
 # 暗号化対称データ
 plaintext = b"I hate working overtime..."
 """ 設定 """
@@ -158,7 +167,7 @@ slot = pkcs11.getSlotList(tokenPresent=True)[0]
 session = pkcs11.openSession(slot, PyKCS11.CKF_RW_SESSION | PyKCS11.CKF_SERIAL_SESSION)
 
 # ログイン
-session.login("1234")
+session.login(PIN)
 
 # AES 256 キーを作成
 key_template = [
@@ -183,13 +192,13 @@ enc_mechanism = PyKCS11.Mechanism(PyKCS11.CKM_AES_CBC_PAD, iv)
 ciphertext = session.encrypt(key_handle, plaintext, enc_mechanism)
 print("Encrypted:", binascii.hexlify(bytearray(ciphertext)))
 
-# 復号化
+# 復号
 decrypted = session.decrypt(key_handle, ciphertext, enc_mechanism)
 
 print("Decrypted:", decrypted)
 # print(bytes(decrypted).decode("utf-8"))
 
-# 暗号化・復号化の検証
+# 暗号化・復号の検証
 assert plaintext == bytes(decrypted)
 
 # 鍵削除
@@ -199,6 +208,7 @@ session.destroyObject(key_handle)
 session.logout()
 session.closeSession()
 ```
+
 </details>
 
 <details open="">
@@ -213,6 +223,9 @@ from PyKCS11 import PyKCS11
 """ 設定 """
 # PKCS11 モジュールのパス
 PKCS11_LIB = "/usr/lib/softhsm/libsofthsm2.so"
+
+# User PIN
+PIN = "1234"
 
 # 暗号化対称データ
 plaintext = b"I hate working overtime..."
@@ -256,7 +269,7 @@ slot = pkcs11.getSlotList(tokenPresent=True)[0]
 session = pkcs11.openSession(slot, PyKCS11.CKF_RW_SESSION | PyKCS11.CKF_SERIAL_SESSION)
 
 # ログイン
-session.login("1234")
+session.login(PIN)
 
 # AES 256 キーを作成
 key_template = [
@@ -309,4 +322,5 @@ session.destroyObject(wrapkey_handle)
 session.logout()
 session.closeSession()
 ```
-<details>
+
+</details>

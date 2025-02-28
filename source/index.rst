@@ -58,4 +58,5 @@ Python Test Tool
    ./gcp/google_tink
 
    ./sample/pykcs11
+   ./sample/python-pkcs11
 
