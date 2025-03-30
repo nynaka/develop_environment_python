@@ -48,6 +48,7 @@ Python Test Tool
    :maxdepth: 2
    :caption: サンプルコード
 
+   ./sample/os
    ./sample/datetime
    ./sample/pykcs11
    ./sample/python-pkcs11
