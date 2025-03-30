@@ -46,17 +46,18 @@ Python Test Tool
 
 .. toctree::
    :maxdepth: 2
-   :caption: 学習資料・E ラーニングサイト
-
-   ./study
-
-.. toctree::
-   :maxdepth: 2
    :caption: サンプルコード
+
+   ./sample/datetime
+   ./sample/pykcs11
+   ./sample/python-pkcs11
 
    ./aws/aws_sdk
    ./gcp/google_tink
 
-   ./sample/pykcs11
-   ./sample/python-pkcs11
 
+.. toctree::
+   :maxdepth: 2
+   :caption: 学習資料・E ラーニングサイト
+
+   ./study
